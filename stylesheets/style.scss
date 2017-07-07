@@ -28,11 +28,12 @@ h2 {
 body {
   font-family: $bodyFont;
   font-size: .95em;
+  background-image: url('../assets/images/background.jpg');
+
 }
 
 header {
   background-color: $black;
-  width: 100%;
 }
 
 header img {
@@ -40,11 +41,12 @@ header img {
   margin: 5px;
 }
 
+
 .main-text {
   background-color: $yellow;
   padding: 15px;
   margin: 50px 0px 0px 20px;
-  // width: 600px;
+  width: 500px;
 }
 
 input {
@@ -88,6 +90,8 @@ button:hover {
   margin-top: 10px;
 }
 
-@media screen and (max-width:736px) {
-
+@media screen and (max-width:550px) {
+  .main-text {
+    width: 100%;
+  }
 }

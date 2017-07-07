@@ -16,11 +16,11 @@ h2 {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: .95em; }
+  font-size: .95em;
+  background-image: url("../assets/images/background.jpg"); }
 
 header {
-  background-color: #1A1A1A;
-  width: 100%; }
+  background-color: #1A1A1A; }
 
 header img {
   height: 45px;
@@ -29,7 +29,8 @@ header img {
 .main-text {
   background-color: #FBEE75;
   padding: 15px;
-  margin: 50px 0px 0px 20px; }
+  margin: 50px 0px 0px 20px;
+  width: 500px; }
 
 input {
   font-family: inherit;
@@ -63,5 +64,9 @@ button:hover {
 .alert {
   color: #FB0D57;
   margin-top: 10px; }
+
+@media screen and (max-width: 550px) {
+  .main-text {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
