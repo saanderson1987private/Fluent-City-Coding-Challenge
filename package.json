@@ -1,0 +1,15 @@
+{
+  "name": "FC_DevDesigner_Code_Challenge",
+  "version": "1.0.0",
+  "description": "We’d like you to design and implement a button that the user will click to continue through an experience where they are filling out a series of forms (The choice of form we leave up to you). The button starts out in a disabled state, and once the user has supplied the required information, it will be enabled.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}

@@ -1,0 +1,67 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #1A1A1A; }
+
+h1 {
+  font-family: "League Gothic";
+  text-transform: uppercase;
+  font-size: 2.5em; }
+
+h2 {
+  font-weight: bold;
+  font-size: 1.15em;
+  margin: 15px 0px 25px; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: .95em; }
+
+header {
+  background-color: #1A1A1A; }
+
+header img {
+  height: 45px;
+  margin: 5px; }
+
+.main-text {
+  background-color: #FBEE75;
+  padding: 15px;
+  margin: 50px 0px 0px 20px;
+  width: 600px; }
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  border: 2px #1A1A1A solid;
+  padding: 5px;
+  margin: 10px 0px;
+  background-color: #FFFFFF; }
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  margin-top: 15px;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  border: 2px #1A1A1A solid; }
+
+button:hover {
+  cursor: pointer; }
+
+.disabledButton {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  border: 2px #e4e4e4 solid; }
+
+.disabledButton:hover {
+  cursor: default; }
+
+.alert {
+  color: #FB0D57;
+  margin-top: 10px; }
+
+/*# sourceMappingURL=style.css.map */

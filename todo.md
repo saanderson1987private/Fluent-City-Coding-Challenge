@@ -1,0 +1,9 @@
+-find background image : high res of hipsters conversing.
+-put space between buttons
+-find some reason to implement flexbox
+-need transition/animation from disabled to enabled
+-need animation if disabled is clicked
+-make it fit for mobile
+-ensure that all is reusable, especially:
+-make button so that button is reusable, just change the size / color
+-make disabled to enabled animation reusable

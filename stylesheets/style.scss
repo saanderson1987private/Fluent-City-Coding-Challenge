@@ -1,0 +1,88 @@
+$headlineFont: 'League Gothic';
+$bodyFont: 'Open Sans', sans-serif;
+$black: #1A1A1A;
+$yellow: #FBEE75;
+$white: #FFFFFF;
+$red: #FB0D57;
+
+// reset:
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,  ul, li, a{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: $black;
+}
+
+h1 {
+  font-family: $headlineFont;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.15em;
+  margin: 15px 0px 25px;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: .95em;
+}
+
+header {
+  background-color: $black;
+}
+
+header img {
+  height: 45px;
+  margin: 5px;
+}
+
+.main-text {
+  background-color: $yellow;
+  padding: 15px;
+  margin: 50px 0px 0px 20px;
+  width: 600px;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  border: 2px $black solid;
+  padding: 5px;
+  margin: 10px 0px;
+  background-color: $white;
+
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  margin-top: 15px;
+  color: $white;
+  background-color: $black;
+  border: 2px $black solid;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.disabledButton {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  // border: 2px #c1c1c1 solid;
+  border: 2px #e4e4e4 solid;
+}
+
+.disabledButton:hover {
+  cursor: default;
+}
+
+.alert {
+  color: $red;
+  margin-top: 10px;
+}
