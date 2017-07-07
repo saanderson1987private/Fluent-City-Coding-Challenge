@@ -19,7 +19,8 @@ body {
   font-size: .95em; }
 
 header {
-  background-color: #1A1A1A; }
+  background-color: #1A1A1A;
+  width: 100%; }
 
 header img {
   height: 45px;
@@ -28,8 +29,7 @@ header img {
 .main-text {
   background-color: #FBEE75;
   padding: 15px;
-  margin: 50px 0px 0px 20px;
-  width: 600px; }
+  margin: 50px 0px 0px 20px; }
 
 input {
   font-family: inherit;
