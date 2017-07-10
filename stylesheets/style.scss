@@ -1,18 +1,11 @@
-$headlineFont: 'League Gothic';
-$bodyFont: 'Open Sans', sans-serif;
-$black: #1A1A1A;
-$yellow: #FBEE75;
-$white: #FFFFFF;
-$red: #FB0D57;
+@import 'style_specs';
+$mainTextBackground: $yellow;
+$buttonBackgroundEnabled: $black;
+$buttonColorEnabled: $white;
+@import 'reset';
+@import 'button';
 
-// reset:
-html, body, div, span, h1, h2, h3, h4, h5, h6, p,  ul, li, a{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  color: $black;
-  box-sizing: border-box;
-}
+
 
 h1 {
   font-family: $headlineFont;
@@ -47,7 +40,7 @@ header img {
 }
 
 .main-text {
-  background-color: $yellow;
+  background-color: $mainTextBackground;
   padding: 15px;
   width: 500px;
 }
@@ -62,30 +55,8 @@ input {
 
 }
 
-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 7px 21px;
+.button-row {
   margin-top: 15px;
-  color: $white;
-  background-color: $black;
-  border: 2px $black solid;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-.disabledButton {
-  color: #b9b5b5;
-  background-color: #e4e4e4;
-  // border: 2px #c1c1c1 solid;
-  border: 2px #e4e4e4 solid;
-}
-
-.disabledButton:hover {
-  cursor: default;
 }
 
 .alert {

@@ -65,19 +65,25 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-let submitButton = document.querySelector('#submit-button');
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_js__ = __webpack_require__(1);
+
+
+let submitButton = new __WEBPACK_IMPORTED_MODULE_0__button_js__["a" /* default */]('#submit-button');
 let alert = document.querySelector('.alert');
 
-submitButton.onclick = (event) => {
+submitButton.docObj.onclick = (event) => {
   event.preventDefault();
-  console.log('clicked');
-  let disabledSubmitText = "Vous devez remplir toutes les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'."
-  if (submitButton.classList.contains("disabledButton")) {
+  let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'."
+
+  if (submitButton.docObj.classList.contains("disabledButton")) {
     alert.innerHTML = disabledSubmitText;
   }
 };
+
 
 const checkFieldsComplete = () => {
   let inputFields = document.querySelectorAll('#ex3 input');
@@ -89,16 +95,42 @@ const checkFieldsComplete = () => {
     }
   }
 
-  if (fieldsFilled) {
-    submitButton.classList.remove('disabledButton');
+  if(fieldsFilled) {
+    submitButton.enable();
     setTimeout(()=> { alert.innerHTML = ""; }, 100);
   } else {
-    submitButton.className = "disabledButton";
+    submitButton.disable();
   }
 
 };
 
 setInterval(checkFieldsComplete, 100);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+class Button {
+
+  constructor(id) {
+    this.docObj = document.querySelector(id);
+  }
+
+  disable() {
+    this.docObj.className = "disabledButton";
+  }
+
+  enable() {
+    this.docObj.classList.remove('disabledButton');
+    this.docObj.classList.add('enableButtonAnim');
+  }
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Button;
+
 
 
 /***/ })

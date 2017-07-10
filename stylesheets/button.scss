@@ -1,0 +1,46 @@
+
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  color: $buttonColorEnabled;
+  background-color: $buttonBackgroundEnabled;
+  border: 2px $buttonBackgroundEnabled solid;
+}
+
+
+
+button:hover {
+  cursor: pointer;
+  background-color: $mainTextBackground;
+  color: $black;
+}
+
+.enableButtonAnim {
+  animation-name: enable;
+  animation-duration: 0.5s;
+}
+
+@keyframes enable {
+  from {background-color: #e4e4e4; color:#b9b5b5; border: 2px #e4e4e4 solid;}
+  to {background-color: $buttonBackgroundEnabled; color: $buttonColorEnabled;}
+}
+
+.disabledButton {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  // border: 2px #c1c1c1 solid;
+  border: 2px #e4e4e4 solid;
+}
+
+.disabledButton:hover {
+  cursor: default;
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+}
+
+.disabledButton:active {
+  background: linear-gradient(#e4e4e4, #ccc, #e4e4e4);
+}

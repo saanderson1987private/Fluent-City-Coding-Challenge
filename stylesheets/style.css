@@ -5,6 +5,45 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   color: #1A1A1A;
   box-sizing: border-box; }
 
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  border: 2px #1A1A1A solid; }
+
+button:hover {
+  cursor: pointer;
+  background-color: #FBEE75;
+  color: #1A1A1A; }
+
+.enableButtonAnim {
+  animation-name: enable;
+  animation-duration: 0.5s; }
+
+@keyframes enable {
+  from {
+    background-color: #e4e4e4;
+    color: #b9b5b5;
+    border: 2px #e4e4e4 solid; }
+  to {
+    background-color: #1A1A1A;
+    color: #FFFFFF; } }
+.disabledButton {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  border: 2px #e4e4e4 solid; }
+
+.disabledButton:hover {
+  cursor: default;
+  color: #b9b5b5;
+  background-color: #e4e4e4; }
+
+.disabledButton:active {
+  background: linear-gradient(#e4e4e4, #ccc, #e4e4e4); }
+
 h1 {
   font-family: "League Gothic";
   text-transform: uppercase;
@@ -43,26 +82,8 @@ input {
   margin: 10px 0px;
   background-color: #FFFFFF; }
 
-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 7px 21px;
-  margin-top: 15px;
-  color: #FFFFFF;
-  background-color: #1A1A1A;
-  border: 2px #1A1A1A solid; }
-
-button:hover {
-  cursor: pointer; }
-
-.disabledButton {
-  color: #b9b5b5;
-  background-color: #e4e4e4;
-  border: 2px #e4e4e4 solid; }
-
-.disabledButton:hover {
-  cursor: default; }
+.button-row {
+  margin-top: 15px; }
 
 .alert {
   color: #FB0D57;

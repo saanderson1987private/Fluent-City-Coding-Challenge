@@ -1,14 +1,17 @@
-let submitButton = document.querySelector('#submit-button');
+import Button from './button.js';
+
+let submitButton = new Button('#submit-button');
 let alert = document.querySelector('.alert');
 
-submitButton.onclick = (event) => {
+submitButton.docObj.onclick = (event) => {
   event.preventDefault();
-  console.log('clicked');
-  let disabledSubmitText = "Vous devez remplir toutes les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'."
-  if (submitButton.classList.contains("disabledButton")) {
+  let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'."
+
+  if (submitButton.docObj.classList.contains("disabledButton")) {
     alert.innerHTML = disabledSubmitText;
   }
 };
+
 
 const checkFieldsComplete = () => {
   let inputFields = document.querySelectorAll('#ex3 input');
@@ -20,11 +23,11 @@ const checkFieldsComplete = () => {
     }
   }
 
-  if (fieldsFilled) {
-    submitButton.classList.remove('disabledButton');
+  if(fieldsFilled) {
+    submitButton.enable();
     setTimeout(()=> { alert.innerHTML = ""; }, 100);
   } else {
-    submitButton.className = "disabledButton";
+    submitButton.disable();
   }
 
 };
