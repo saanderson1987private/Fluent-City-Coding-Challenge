@@ -85,6 +85,12 @@ input {
 .button-row {
   margin-top: 15px; }
 
+.button-row button {
+  margin-left: 20px; }
+
+.button-row button:first-child {
+  margin-left: 0px; }
+
 .alert {
   color: #FB0D57;
   margin-top: 10px; }
@@ -92,5 +98,16 @@ input {
 @media screen and (max-width: 550px) {
   .main-text {
     width: 100%; } }
+@media screen and (max-width: 360px) {
+  .main-text {
+    width: 100%; }
+
+  .button-row button {
+    margin-top: 20px;
+    margin-left: 0px;
+    display: block; }
+
+  .button-row button:first-child {
+    margin-top: 0px; } }
 
 /*# sourceMappingURL=style.css.map */
