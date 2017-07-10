@@ -2,7 +2,8 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   margin: 0;
   padding: 0;
   border: 0;
-  color: #1A1A1A; }
+  color: #1A1A1A;
+  box-sizing: border-box; }
 
 h1 {
   font-family: "League Gothic";
@@ -26,10 +27,12 @@ header img {
   height: 45px;
   margin: 5px; }
 
+.main {
+  padding: 50px 0px 0px 20px; }
+
 .main-text {
   background-color: #FBEE75;
   padding: 15px;
-  margin: 50px 0px 0px 20px;
   width: 500px; }
 
 input {
