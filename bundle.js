@@ -33,6 +33,9 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -60,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -68,22 +71,50 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+
+class Button {
+
+  constructor(id) {
+    this.docObj = document.querySelector(id);
+  }
+
+  disable() {
+    this.docObj.classList.add("disabledButton");
+  }
+
+  enable() {
+    this.docObj.classList.remove("disabledButton");
+    this.docObj.classList.add("enableButtonAnim");
+  }
+
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Button;
+
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_js__ = __webpack_require__(0);
 
 
 let submitButton = new __WEBPACK_IMPORTED_MODULE_0__button_js__["a" /* default */]('#submit-button');
+let hintButton = document.querySelector('#hint-button');
 let alert = document.querySelector('.alert');
 
 submitButton.docObj.onclick = (event) => {
   event.preventDefault();
-  let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'."
+  let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'.";
 
   if (submitButton.docObj.classList.contains("disabledButton")) {
     alert.innerHTML = disabledSubmitText;
   }
 };
 
+hintButton.onclick = (event) => {event.preventDefault();};
 
 const checkFieldsComplete = () => {
   let inputFields = document.querySelectorAll('#ex3 input');
@@ -105,32 +136,6 @@ const checkFieldsComplete = () => {
 };
 
 setInterval(checkFieldsComplete, 100);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-class Button {
-
-  constructor(id) {
-    this.docObj = document.querySelector(id);
-  }
-
-  disable() {
-    this.docObj.className = "disabledButton";
-  }
-
-  enable() {
-    this.docObj.classList.remove('disabledButton');
-    this.docObj.classList.add('enableButtonAnim');
-  }
-
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Button;
-
 
 
 /***/ })

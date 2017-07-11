@@ -26,7 +26,9 @@ button:hover {
   to {background-color: $buttonBackgroundEnabled; color: $buttonColorEnabled;}
 }
 
+
 .disabledButton {
+  user-select: none;
   color: #b9b5b5;
   background-color: #e4e4e4;
   // border: 2px #c1c1c1 solid;
@@ -40,5 +42,16 @@ button:hover {
 }
 
 .disabledButton:active {
-  background: linear-gradient(#e4e4e4, #ccc, #e4e4e4);
+  animation-name: shake;
+	animation-duration: 200ms;
+}
+
+@keyframes shake {
+	0% { transform: translate(2px); }
+	17% { transform: translate(0px); }
+	33% { transform: translate(-2px); }
+  50% { transform: translate(0px); }
+  67% { transform: translate(2px); }
+  100% { transform: translate(0px); }
+
 }

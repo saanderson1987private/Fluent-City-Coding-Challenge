@@ -32,6 +32,7 @@ button:hover {
     background-color: #1A1A1A;
     color: #FFFFFF; } }
 .disabledButton {
+  user-select: none;
   color: #b9b5b5;
   background-color: #e4e4e4;
   border: 2px #e4e4e4 solid; }
@@ -42,8 +43,22 @@ button:hover {
   background-color: #e4e4e4; }
 
 .disabledButton:active {
-  background: linear-gradient(#e4e4e4, #ccc, #e4e4e4); }
+  animation-name: shake;
+  animation-duration: 200ms; }
 
+@keyframes shake {
+  0% {
+    transform: translate(2px); }
+  17% {
+    transform: translate(0px); }
+  33% {
+    transform: translate(-2px); }
+  50% {
+    transform: translate(0px); }
+  67% {
+    transform: translate(2px); }
+  100% {
+    transform: translate(0px); } }
 h1 {
   font-family: "League Gothic";
   text-transform: uppercase;
@@ -74,6 +89,9 @@ header img {
   padding: 15px;
   width: 500px; }
 
+label {
+  display: block; }
+
 input {
   font-family: inherit;
   font-size: inherit;
@@ -81,6 +99,9 @@ input {
   padding: 5px;
   margin: 10px 0px;
   background-color: #FFFFFF; }
+
+p {
+  display: inline; }
 
 .button-row {
   margin-top: 15px; }

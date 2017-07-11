@@ -6,12 +6,12 @@ export default class Button {
   }
 
   disable() {
-    this.docObj.className = "disabledButton";
+    this.docObj.classList.add("disabledButton");
   }
 
   enable() {
-    this.docObj.classList.remove('disabledButton');
-    this.docObj.classList.add('enableButtonAnim');
+    this.docObj.classList.remove("disabledButton");
+    this.docObj.classList.add("enableButtonAnim");
   }
 
 }
