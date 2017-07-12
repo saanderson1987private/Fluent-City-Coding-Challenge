@@ -5,25 +5,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   color: #1A1A1A;
   box-sizing: border-box; }
 
-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 7px 21px;
-  color: #FFFFFF;
-  background-color: #1A1A1A;
-  border: 2px #1A1A1A solid; }
-
-button:hover {
-  cursor: pointer;
-  background-color: #FBEE75;
-  color: #1A1A1A; }
-
-.enableButtonAnim {
-  animation-name: enable;
-  animation-duration: 0.5s; }
-
-@keyframes enable {
+@keyframes fadeIn {
   from {
     background-color: #e4e4e4;
     color: #b9b5b5;
@@ -31,21 +13,6 @@ button:hover {
   to {
     background-color: #1A1A1A;
     color: #FFFFFF; } }
-.disabledButton {
-  user-select: none;
-  color: #b9b5b5;
-  background-color: #e4e4e4;
-  border: 2px #e4e4e4 solid; }
-
-.disabledButton:hover {
-  cursor: default;
-  color: #b9b5b5;
-  background-color: #e4e4e4; }
-
-.disabledButton:active {
-  animation-name: shake;
-  animation-duration: 200ms; }
-
 @keyframes shake {
   0% {
     transform: translate(2px); }
@@ -59,6 +26,38 @@ button:hover {
     transform: translate(2px); }
   100% {
     transform: translate(0px); } }
+.hw-form-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 7px 21px;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  border: 2px #1A1A1A solid; }
+
+.hw-form-button:hover {
+  cursor: pointer;
+  background-color: #FBEE75;
+  color: #1A1A1A; }
+
+.hw-form-button--enable-button-anim {
+  animation-name: fadeIn;
+  animation-duration: 0.5s; }
+
+.hw-form-button--disabled {
+  color: #b9b5b5;
+  background-color: #e4e4e4;
+  border: 2px #e4e4e4 solid; }
+
+.hw-form-button--disabled:hover {
+  cursor: default;
+  color: #b9b5b5;
+  background-color: #e4e4e4; }
+
+.hw-form-button--disabled:active {
+  animation-name: shake;
+  animation-duration: 200ms; }
+
 h1 {
   font-family: "League Gothic";
   text-transform: uppercase;
@@ -84,10 +83,13 @@ header img {
 .main {
   padding: 50px 0px 0px 20px; }
 
-.main-text {
+.main__text {
   background-color: #FBEE75;
   padding: 15px;
   width: 500px; }
+
+.hw-form-question {
+  padding-bottom: 15px; }
 
 label {
   display: block; }
@@ -103,13 +105,10 @@ input {
 p {
   display: inline; }
 
-.button-row {
-  margin-top: 15px; }
-
-.button-row button {
+.hw-form-button-row button {
   margin-left: 20px; }
 
-.button-row button:first-child {
+.hw-form-button-row button:first-child {
   margin-left: 0px; }
 
 .alert {
@@ -117,18 +116,18 @@ p {
   margin-top: 10px; }
 
 @media screen and (max-width: 550px) {
-  .main-text {
+  .main__text {
     width: 100%; } }
 @media screen and (max-width: 360px) {
-  .main-text {
+  .main__text {
     width: 100%; }
 
-  .button-row button {
+  .hw-form-button-row button {
     margin-top: 20px;
     margin-left: 0px;
     display: block; }
 
-  .button-row button:first-child {
+  .hw-form-button-row button:first-child {
     margin-top: 0px; } }
 
 /*# sourceMappingURL=style.css.map */

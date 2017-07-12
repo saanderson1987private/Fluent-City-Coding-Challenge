@@ -74,17 +74,21 @@
 
 class Button {
 
-  constructor(id) {
-    this.docObj = document.querySelector(id);
+  constructor(selector, disabledClass="hw-form-button--disabled", enableAnimClass="hw-form-button--enable-button-anim") {
+    this.docObj = document.querySelector(selector);
+    this.disabledClass = disabledClass;
+    this.enableAnimClass = enableAnimClass;
   }
 
   disable() {
-    this.docObj.classList.add("disabledButton");
+    this.docObj.classList.add(this.disabledClass);
+    this.docObj.classList.remove(this.enableAnimClass);
+
   }
 
   enable() {
-    this.docObj.classList.remove("disabledButton");
-    this.docObj.classList.add("enableButtonAnim");
+    this.docObj.classList.remove(this.disabledClass);
+    this.docObj.classList.add(this.enableAnimClass);
   }
 
 }
@@ -101,16 +105,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_js__ = __webpack_require__(0);
 
 
-let submitButton = new __WEBPACK_IMPORTED_MODULE_0__button_js__["a" /* default */]('#submit-button');
-let hintButton = document.querySelector('#hint-button');
+let submitButton = new __WEBPACK_IMPORTED_MODULE_0__button_js__["a" /* default */]('.hw-form-button__submit');
+let hintButton = document.querySelector('.hw-form-button__hint');
 let alert = document.querySelector('.alert');
 
 submitButton.docObj.onclick = (event) => {
   event.preventDefault();
   let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'.";
 
-  if (submitButton.docObj.classList.contains("disabledButton")) {
+  if (submitButton.docObj.classList.contains("hw-form-button--disabled")) {
     alert.innerHTML = disabledSubmitText;
+    alert.scrollIntoView();
   }
 };
 

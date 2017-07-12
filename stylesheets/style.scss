@@ -5,8 +5,6 @@ $buttonColorEnabled: $white;
 @import 'reset';
 @import 'button';
 
-
-
 h1 {
   font-family: $headlineFont;
   text-transform: uppercase;
@@ -23,7 +21,6 @@ body {
   font-family: $bodyFont;
   font-size: .95em;
   background-image: url('../assets/images/background.jpg');
-
 }
 
 header {
@@ -39,10 +36,14 @@ header img {
   padding: 50px 0px 0px 20px;
 }
 
-.main-text {
+.main__text {
   background-color: $mainTextBackground;
   padding: 15px;
   width: 500px;
+}
+
+.hw-form-question {
+  padding-bottom: 15px;
 }
 
 label {
@@ -63,14 +64,14 @@ p {
   display: inline;
 }
 
-.button-row {
-  margin-top: 15px;
+.hw-form-button-row {
+  // margin-top: 10px;
 }
 
-.button-row button {
+.hw-form-button-row button {
   margin-left: 20px;
 }
-.button-row button:first-child {
+.hw-form-button-row button:first-child {
   margin-left: 0px;
 }
 
@@ -80,24 +81,24 @@ p {
 }
 
 @media screen and (max-width:550px) {
-  .main-text {
+  .main__text {
     width: 100%;
   }
 }
 
 @media screen and (max-width:360px) {
-  .main-text {
+  .main__text {
     width: 100%;
   }
 
 
-  .button-row button {
+  .hw-form-button-row button {
     margin-top: 20px;
     margin-left: 0px;
     display: block;
   }
 
-  .button-row button:first-child {
+  .hw-form-button-row button:first-child {
     margin-top: 0px;
   }
 }

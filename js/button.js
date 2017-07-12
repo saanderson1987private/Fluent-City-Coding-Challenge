@@ -1,17 +1,21 @@
 
 export default class Button {
 
-  constructor(id) {
-    this.docObj = document.querySelector(id);
+  constructor(selector, disabledClass="hw-form-button--disabled", enableAnimClass="hw-form-button--enable-button-anim") {
+    this.docObj = document.querySelector(selector);
+    this.disabledClass = disabledClass;
+    this.enableAnimClass = enableAnimClass;
   }
 
   disable() {
-    this.docObj.classList.add("disabledButton");
+    this.docObj.classList.add(this.disabledClass);
+    this.docObj.classList.remove(this.enableAnimClass);
+
   }
 
   enable() {
-    this.docObj.classList.remove("disabledButton");
-    this.docObj.classList.add("enableButtonAnim");
+    this.docObj.classList.remove(this.disabledClass);
+    this.docObj.classList.add(this.enableAnimClass);
   }
 
 }

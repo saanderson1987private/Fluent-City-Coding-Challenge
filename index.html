@@ -13,50 +13,37 @@
       <img src='assets/images/fc-logo.svg'></img>
     </header>
     <div class="main">
-      <div class="main-text">
-        <h1>Exercise 3</h1>
+      <div class="main__text">
+        <h1>Exercice 3</h1>
         <h2>Compl&#233;tez les espaces suivantes avec la r&#233;ponse convenable.</h2>
+
         <form id="ex3">
-          <label for="q1">1. Comment vous vous appelez?</label>
-
-          <input
-          type="text"
-          id="q1"
-          />
-          <p>Michel.<p>
-
-
+          <div class=hw-form-question>
+            <label for="q1">1. Comment vous vous appelez?</label>
+            <input type="text" id="q1"/>
+            <p>Michel.<p>
+          </div>
+          <div class=hw-form-question>
             <label for="q2-a">2. Vous avez quel &#226;ge?</label>
-
-            <input
-            type="text"
-            id="q2-a"
-            />
+            <input type="text" id="q2-a"/>
             <p>25</p>
-            <input
-            type="text"
-            id="q2-b"
-            />
+            <input type="text" id="q2-b"/>
             <p>.</p>
-
-
+          </div>
+          <div class=hw-form-question>
             <label for="q3">3. D'o&#249; vous venez?</label>
-
-            <input
-            type="text"
-            id="q3"
-            />
+            <input type="text" id="q3"/>
             <p>Paris.</p>
-
-            <div class="button-row">
-              <button id="submit-button" class="disabledButton" >Submit Responses</button>
-              <button id="hint-button">Hint</button>
-            </div>
-          </form>
-          <div class="alert"></div>
-        </div>
+          </div>
+          <div class="hw-form-button-row">
+            <button class="hw-form-button hw-form-button__submit hw-form-button--disabled">Submit Responses</button>
+            <button class= "hw-form-button hw-form-button__hint">Hint</button>
+          </div>
+        </form>
+        <div class="alert"></div>
       </div>
-      <script src="bundle.js"></script>
+    </div>
+    <script src="bundle.js"></script>
   </body>
 
 

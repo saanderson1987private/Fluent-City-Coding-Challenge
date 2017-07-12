@@ -1,0 +1,23 @@
+@mixin enable-button-anim {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {background-color: #e4e4e4; color:#b9b5b5; border: 2px #e4e4e4 solid;}
+  to {background-color: $buttonBackgroundEnabled; color: $buttonColorEnabled;}
+}
+
+@mixin click-on-disabled-button {
+  animation-name: shake;
+	animation-duration: 200ms;
+}
+
+@keyframes shake {
+	0% { transform: translate(2px); }
+	17% { transform: translate(0px); }
+	33% { transform: translate(-2px); }
+  50% { transform: translate(0px); }
+  67% { transform: translate(2px); }
+  100% { transform: translate(0px); }
+}

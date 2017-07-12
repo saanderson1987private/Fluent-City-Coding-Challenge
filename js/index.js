@@ -1,15 +1,16 @@
 import Button from './button.js';
 
-let submitButton = new Button('#submit-button');
-let hintButton = document.querySelector('#hint-button');
+let submitButton = new Button('.hw-form-button__submit');
+let hintButton = document.querySelector('.hw-form-button__hint');
 let alert = document.querySelector('.alert');
 
 submitButton.docObj.onclick = (event) => {
   event.preventDefault();
   let disabledSubmitText = "Vous devez remplir tous les espaces ! Si vous avez besoin d'aide, cliquez sur le bouton 'HINT'.";
 
-  if (submitButton.docObj.classList.contains("disabledButton")) {
+  if (submitButton.docObj.classList.contains("hw-form-button--disabled")) {
     alert.innerHTML = disabledSubmitText;
+    alert.scrollIntoView();
   }
 };
 

@@ -1,4 +1,6 @@
-button {
+@import 'animation';
+
+.hw-form-button {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
@@ -8,50 +10,28 @@ button {
   border: 2px $buttonBackgroundEnabled solid;
 }
 
-
-
-button:hover {
+.hw-form-button:hover {
   cursor: pointer;
   background-color: $mainTextBackground;
   color: $black;
 }
 
-.enableButtonAnim {
-  animation-name: enable;
-  animation-duration: 0.5s;
+.hw-form-button--enable-button-anim {
+  @include enable-button-anim;
 }
 
-@keyframes enable {
-  from {background-color: #e4e4e4; color:#b9b5b5; border: 2px #e4e4e4 solid;}
-  to {background-color: $buttonBackgroundEnabled; color: $buttonColorEnabled;}
-}
-
-
-.disabledButton {
-  user-select: none;
+.hw-form-button--disabled {
   color: #b9b5b5;
   background-color: #e4e4e4;
-  // border: 2px #c1c1c1 solid;
   border: 2px #e4e4e4 solid;
 }
 
-.disabledButton:hover {
+.hw-form-button--disabled:hover {
   cursor: default;
   color: #b9b5b5;
   background-color: #e4e4e4;
 }
 
-.disabledButton:active {
-  animation-name: shake;
-	animation-duration: 200ms;
-}
-
-@keyframes shake {
-	0% { transform: translate(2px); }
-	17% { transform: translate(0px); }
-	33% { transform: translate(-2px); }
-  50% { transform: translate(0px); }
-  67% { transform: translate(2px); }
-  100% { transform: translate(0px); }
-
+.hw-form-button--disabled:active {
+  @include click-on-disabled-button;
 }
